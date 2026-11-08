@@ -7,7 +7,7 @@ cv.md must start with three things, in this order:
     location · email · github.com/user · linkedin.com/in/user
 then ## Summary, ## Skills (- **Group:** a, b), ## Experience (### Role, Company
 then a "Month YYYY to Present · Place" line, a one-line summary, and - bullets),
-and ## Education.
+## Education, and optionally ## Languages and ## Interests (- **Name:** a, b).
 
 The page is rendered by the JSON Resume theme clinical-precision (see package.json).
 Run:   npm ci && python3 build.py
@@ -64,6 +64,11 @@ def to_resume(text):
             # split on commas that are not inside parentheses
             skills.append({"name": s[1], "keywords": re.split(r",\s*(?![^()]*\))", s[2])})
 
+    languages = [{"language": m[1], "fluency": m[2]}
+                 for m in re.finditer(r"- \*\*(.+?):\*\* (.+)", sections.get("Languages", ""))]
+    interests = [{"name": m[1], "keywords": re.split(r",\s*", m[2])}
+                 for m in re.finditer(r"- \*\*(.+?):\*\* (.+)", sections.get("Interests", ""))]
+
     work = []
     for block in re.split(r"(?m)^### ", sections["Experience"])[1:]:
         head, dates, summary, bullets = re.match(r"(.+?)\n\n(.+?)\n\n(.+?)\n\n(.*)", block, re.S).groups()
@@ -85,6 +90,8 @@ def to_resume(text):
         "work": work,
         "education": [{"institution": school, "area": area, "studyType": degree, "endDate": year}],
         "skills": skills,
+        "languages": languages,
+        "interests": interests,
         "meta": {"theme": THEME},
     }
 

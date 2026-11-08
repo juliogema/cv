@@ -58,3 +58,13 @@ Cloud platform for online game backends (identity, multiplayer servers, billing)
 ## Education
 
 Bachelor Degree of Applied Science in Informatics Engineering, Surabaya State Polytechnic, 2021
+
+## Languages
+
+- **English:** Professional
+
+## Interests
+
+- **Video games (mainly Path of Exile, Path of Exile 2 and The Bazaar):** ARPG, Deckbuilding, Autobattler, City Builder
+- **Software engineering:** Programming, Backend, Game Dev, AI
+- **Fitness:** Lifting Weight, Running, Swimming
