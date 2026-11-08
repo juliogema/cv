@@ -6,11 +6,11 @@ Indonesia · juliogema.personal@gmail.com · github.com/juliogema · linkedin.co
 
 ## Summary
 
-Software engineer who builds and operates cloud services in Go for a game-backend platform. Recent work covers usage-based billing and metering, concurrency controls, audit logging, and data migrations, using MongoDB, Redis, Kafka, AWS and Kubernetes. Writes tech specs and defends design decisions in review. Ships changes with code review and security review, and uses AI coding agents (Claude Code) as part of a documented, repeatable workflow.
+Software engineer who builds and operates cloud services in Go for a game-backend platform, with additional experience in Java and .NET Core. Recent work covers usage-based billing and metering, concurrency controls, audit logging, and data migrations, using MongoDB, Redis, Kafka, AWS and Kubernetes. Writes tech specs and defends design decisions in review. Ships changes with code review and security review, and uses AI coding agents (Claude Code) as part of a documented, repeatable workflow.
 
 ## Skills
 
-- **Languages:** Go, Python, SQL, Bash
+- **Languages:** Go, Java, C# (.NET Core), Python, SQL, Bash
 - **Data and messaging:** MongoDB, Redis, Kafka (event streaming), AWS Athena
 - **Cloud and infrastructure:** AWS, Kubernetes, Helm, Kustomize, Flux, Docker, secrets management (AWS Parameter Store, ExternalSecrets)
 - **Backend practices:** REST and gRPC APIs, OpenAPI/Swagger, feature flags, data migrations, idempotent job design, rate limiting, audit logging, observability and log analysis
@@ -54,11 +54,6 @@ Cloud platform for online game backends (identity, multiplayer servers, billing)
 - Runs a code review and a security review on larger changes before opening the pull request, checks each finding against the code, and fixes the valid ones. Skips findings that conflict with a recorded design decision and says why.
 - Keeps a structured daily engineering log with decisions, state and next steps, written so another engineer or an AI agent can pick the work up without extra context.
 - Writes specs and design docs in Confluence and answers review comments in rounds. One spec had 15 inline comments in the first round, each checked against the code before the spec was updated.
-
-## Projects
-
-**Engineering work log** (personal project)
-Static site built with MkDocs and the shadcn theme from Markdown posts. A custom build hook generates the home page, tags and navigation. Deployed on Cloudflare Workers behind Cloudflare Access. A Claude Code skill appends each day's entries. Migrated 27 pages from Notion.
 
 ## Education
 

@@ -1,2 +1,5 @@
 cv-*.md
 !cv.md
+dist/
+.venv/
+__pycache__/

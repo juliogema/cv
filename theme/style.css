@@ -1,0 +1,110 @@
+:root {
+  --bg: #f5f9f6;
+  --fg: #1c2b24;
+  --muted: #4f6458;
+  --accent: #2d6a4f;
+  --rule: #d3e3d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1a15;
+    --fg: #e3efe8;
+    --muted: #9db5a6;
+    --accent: #7fcf9f;
+    --rule: #22382d;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+
+.top {
+  padding-bottom: 24px;
+  border-bottom: 3px solid var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.role {
+  margin: 0.4rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+h2 {
+  margin: 2.5rem 0 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h3 { margin: 1.2rem 0 0.1rem; font-size: 1.2rem; }
+
+h4 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+p { margin: 0.5rem 0; }
+.meta { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--muted); }
+
+ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+li { margin: 0.4rem 0; }
+li::marker { color: var(--accent); }
+
+@media (max-width: 520px) {
+  .page { padding: 32px 18px 48px; }
+  h1 { font-size: 2rem; }
+}
+
+@media print {
+  @page { margin: 14mm; }
+  :root { --bg: #fff; --fg: #000; --muted: #333; --accent: #1f5a40; --rule: #bbb; }
+  body { font-size: 10.5pt; line-height: 1.4; }
+  .page { max-width: none; padding: 0; }
+  a { color: inherit; }
+  h1 { font-size: 24pt; }
+  h2 { margin-top: 1.4rem; }
+  h2, h3, h4 { break-after: avoid; }
+  li { break-inside: avoid; margin: 0.25rem 0; }
+}
